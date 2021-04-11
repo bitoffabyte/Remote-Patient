@@ -1,0 +1,49 @@
+.asd {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+}
+.left {
+	width: 20vw;
+	height: 100vh;
+}
+
+.right {
+	width: 80vw;
+	height: 100vh;
+	background: #f5f7fa;
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+}
+.leftHead {
+	width: 80%;
+	text-align: center;
+	margin: 10% auto;
+	font-size: 2vw;
+	color: #336cfb;
+}
+.tabs {
+	width: 65%;
+	text-align: left;
+	margin: 10% auto;
+	font-size: 1vw;
+	color: #336cfb;
+}
+.un {
+	color: gray;
+}
+.dds {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10vw;
+	height: 5vh;
+	background: #ffffff;
+	/* card / floating */
+	box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.06);
+	border-radius: 8px;
+	margin: 10%;
+	cursor: pointer;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}

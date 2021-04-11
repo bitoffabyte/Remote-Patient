@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Landing from './Pages/Landing';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useLocalContext } from './Context/Context';
+import Home from './Pages/Home';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+	const { loggedInUser, logout } = useLocalContext();
+	console.log(!!loggedInUser);
 
+	return (
+		<Router className='App'>
+			<Switch>
+				<Route path='/' exact>
+					<Landing />
+				</Route>
+				<Route path='/home' exact>
+					<Home />
+				</Route>
+			</Switch>
+		</Router>
+	);
+}
 export default App;

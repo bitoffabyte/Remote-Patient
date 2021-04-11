@@ -1,0 +1,13 @@
+.dd {
+	width: 20vw;
+	height: 100vh;
+	margin: auto;
+	/* display: flex; */
+	/* justify-content: center; */
+}
+.dd img {
+	position: relative;
+	top: 45%;
+	width: 100%;
+	cursor: pointer;
+}
