@@ -14,7 +14,7 @@ const Landing = () => {
 					src={img}
 					onClick={async () => {
 						await login();
-						history.push('/home');
+						history.push('/location');
 					}}
 				/>
 			</div>

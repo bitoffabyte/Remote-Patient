@@ -3,11 +3,16 @@ import db from '../config';
 import './loc.css';
 import vid from '../Assets/huh.mp4';
 import ReactPlayer from 'react-player';
+import { useHistory, useLocation } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 const Loc = ({ match }) => {
 	const id = match.params.id;
 	const [val, setVal] = useState([]);
 	const [pd, setpd] = useState([]);
+	const location = useLocation();
+	const history = useHistory();
+	console.log(location.pathname);
 	useEffect(() => {
 		db.collection('Loc')
 			.doc(id)
@@ -28,6 +33,7 @@ const Loc = ({ match }) => {
 				console.log(err);
 			});
 	});
+	const [s, ss] = useState(false);
 	return (
 		<div className='asd'>
 			<div className='left'>
@@ -36,8 +42,26 @@ const Loc = ({ match }) => {
 				<br />
 				<br />
 				<br />
-				<div className='tabs'>Locations</div>
-				<div className='tabs un'>Patients</div>
+				<div
+					className='tabs'
+					onClick={() => history.push('/location')}
+					style={{
+						color: location.pathname.includes('location')
+							? '#336cfb'
+							: 'gray',
+					}}>
+					Locations
+				</div>
+				<div
+					className='tabs'
+					style={{
+						color: !location.pathname.includes('location')
+							? '#336cfb'
+							: 'gray',
+					}}
+					onClick={() => history.push('/patients')}>
+					Patients
+				</div>
 			</div>
 			<div className='right rightt'>
 				<div className='dfs'>
@@ -80,6 +104,65 @@ const Loc = ({ match }) => {
 							<p style={{ margin: '2%', fontSize: '1vw' }}>
 								History: {pd ? pd.history : ''}
 							</p>
+							<br />
+							<br />
+							<br />
+							<Button
+								variant='contained'
+								color='primary'
+								onClick={() => ss((p) => !p)}>
+								Dispense Medicines
+							</Button>
+
+							<div
+								style={{
+									marginTop: '10%',
+									display: s ? 'block' : 'none',
+								}}>
+								<Button
+									variant='contained'
+									color='secondary'
+									style={{ margin: '1%' }}
+									onClick={() =>
+										setTimeout(() => alert('Done'), 1000)
+									}>
+									Paracetamol
+								</Button>
+								Qty: 10
+								<br />
+								<Button
+									variant='contained'
+									color='secondary'
+									onClick={() =>
+										setTimeout(() => alert('Done'), 1000)
+									}
+									style={{ margin: '1%' }}>
+									Coldac
+								</Button>
+								Qty: 8
+								<br />
+								<Button
+									variant='contained'
+									color='secondary'
+									onClick={() =>
+										setTimeout(() => alert('Done'), 1000)
+									}
+									style={{ margin: '1%' }}>
+									Aspirine
+								</Button>
+								Qty: 5
+								<br />
+								<Button
+									variant='contained'
+									color='secondary'
+									onClick={() =>
+										setTimeout(() => alert('Done'), 1000)
+									}
+									style={{ margin: '1%' }}>
+									Cetirizine
+								</Button>
+								Qty: 11
+							</div>
 						</div>
 					</div>
 				</div>

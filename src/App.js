@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useLocalContext } from './Context/Context';
 import Home from './Pages/Home';
 import Loc from './Pages/Loc';
-
+import Pat from './Pages/Pat';
+import PetDet from './Pages/PatDet';
 function App() {
 	const { loggedInUser, logout } = useLocalContext();
 	console.log(!!loggedInUser);
@@ -15,12 +16,18 @@ function App() {
 				<Route path='/' exact>
 					<Landing />
 				</Route>
-				<Route path='/home' exact>
+				<Route path='/location' exact>
 					<Home />
+				</Route>
+				<Route path='/patients' exact>
+					<Pat />
 				</Route>
 				<Route
 					path='/location/:id'
-					render={({ match }) => <Loc match={match} />}></Route>
+					render={({ match }) => <Loc match={match} />}></Route>{' '}
+				<Route
+					path='/patient/:id'
+					render={({ match }) => <PetDet match={match} />}></Route>
 			</Switch>
 		</Router>
 	);
