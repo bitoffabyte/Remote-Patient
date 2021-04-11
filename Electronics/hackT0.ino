@@ -3,6 +3,14 @@
 #include <Wire.h>
 #include <MAX30105.h> 
 #include <heartRate.h> 
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h>
+#include <ESP8266HTTPClient.h>
+
+const char* ssid = "REPLACE_WITH_YOUR_SSID";
+const char* password = "REPLACE_WITH_YOUR_PASSWORD";
+
+String serverName = "https://edoctor01.herokuapp.com/";
 
 #define dht_dpin 0
 DHT dht(dht_dpin, DHTTYPE); 
@@ -16,6 +24,10 @@ long lastBeat = 0;
  
 float beatsPerMinute;
 int beatAvg;
+
+unsigned long lastTime = 0;
+unsigned long timerDelay = 5000;
+
 
 
 void setup() 
@@ -31,7 +43,7 @@ while (1);
 
 Serial.println("Place your index finger on the sensor with steady pressure.");
  
-particleSensor.setup(); //Configure sensor with default settings
+particleSensor.setup(); 
 particleSensor.setPulseAmplitudeRed(0x0A); 
 particleSensor.setPulseAmplitudeGreen(0); 
 
@@ -46,6 +58,8 @@ void loop() {
     Serial.println("C  ");
   delay(800);
 
+
+float ecg=analogRead(A0);
 if((digitalRead(10) == 1)||(digitalRead(11) == 1))
 {
 Serial.println('!');
@@ -88,6 +102,27 @@ if (irValue < 50000)
 Serial.print(" No finger?");
  
 Serial.println();
+
+if ((millis() - lastTime) > timerDelay) {
+    //Check WiFi connection status
+    if(WiFi.status()== WL_CONNECTED){
+      HTTPClient http;
+
+      String serverPath = serverName + "temperature="+t + "ecg="+ecg + "BPM="+beatsPerMinute + "SpO2="+irValue ;
+      
+      
+      http.begin(serverPath.c_str());
+      
+
+      
+      http.end();
+    }
+    else {
+      Serial.println("WiFi Disconnected");
+    }
+    lastTime = millis();
+  }
+
 
 delay(1);
   
