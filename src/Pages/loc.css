@@ -1,0 +1,48 @@
+.dfs {
+	width: 70vw;
+	height: 80%;
+
+	background: #ffffff;
+	/* card / floating */
+	box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.06);
+	border-radius: 8px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	transition: all 0.45s ease;
+	display: flex;
+}
+.rightt {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.l {
+	width: 70%;
+	height: 100%;
+}
+.r {
+	width: 30%;
+	height: 100%;
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	flex-direction: column;
+	/* align-items: center; */
+}
+.video {
+	width: 100%;
+	height: 70%;
+}
+.data {
+	width: 100%;
+	height: 30%;
+	padding: 4%;
+}
+
+.data p {
+	font-size: 1vw;
+	font-weight: 600;
+}
+video {
+	width: 100%;
+	height: 100%;
+}
