@@ -4,7 +4,7 @@
     <h5 align = "center">One stop solution for the safest doctor patient interaction in the current times. <br>Due to the COVID-19 pandemic, basic necessities such as visiting a hospital is highly risky. <br/>We have come up with a product that can help people in the rural areas to meet doctors without compromising on their safety.
 
 </p>
-
+### Video Link https://drive.google.com/drive/folders/1uIy9gkGe039Q_ShNa7MP13H8c_HS59xV?usp=sharing
 ### Our Inspiration
 One of our team members’ grandmother is diabetic. This is his story.
 Living in a metro city, visiting a hospital for a change in my grandmother’s insulin dosage was horrific. The crowd in and around the hospital is humongous. I fell sick the very next day and was terrified that I would test positive. Fortunately, it was just a scare. But this experience put things in perspective. After having so many resources at our disposal, this is our condition. 
