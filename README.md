@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+### E-Doc
+One stop solution for the safest doctor patient interaction in the current times. 
+Due to the COVID-19 pandemic, basic necessities such as visiting a hospital is highly risky.
+We have come up with a product that can help people in the rural areas to meet doctors without compromising on their safety.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Our Inspiration
+One of our team members’ grandmother is diabetic. This is his story.
+Living in a metro city, visiting a hospital for a change in my grandmother’s insulin dosage was horrific. The crowd in and around the hospital is humongous. I fell sick the very next day and was terrified that I would test positive. Fortunately, it was just a scare. But this experience put things in perspective. After having so many resources at our disposal, this is our condition. 
+What would a peasant in a village without a proper medical facility even hope to do?
+ 
+### What it Does
+E-Doc cabin has an array of sensors that measure various values of the patient and feed it to the doctor.
+The doctor will be connected live and also can dispense pills at his will to the patient.
+After each patient visit the cabin will be sanitized by itself.
 
-## Available Scripts
+### Designs Link
+Figma Link
+Tech Stack Used:
+React
 
-In the project directory, you can run:
+### Tech stack
+Firebase
+Figma
+Fusion 360
+React
+Webrtc
+Nodemcu
+Keyshot
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### To DO
+Implement Rpi as we do not have it with us
+Scale the project with the government’s help.
+Market product to the urban areas too.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Team Members
+Arnav Kalia
+Jayendra Dukapatti
+R Narayan
+Vedang Kulkarni
